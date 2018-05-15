@@ -1,0 +1,86 @@
+// mixins
+
+@mixin jt-bold-fancy($color: $gray-base) {
+  color: darken($color, $amount: 15%);
+  text-shadow: 1px 1px 2px lighten($color, $amount: 15%);
+}
+
+@mixin jt-button-fancy(
+  $bgcolor: $primary-color,
+  $fontcolor: darken($white, 15%)
+) {
+  background-color: $bgcolor;
+  background-image: linear-gradient(
+    darken($bgcolor, 15%),
+    darken($bgcolor, 15%)
+  );
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 0%;
+  color: $fontcolor;
+  transition: background-size 0.5s, color 0.5s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-size: 100% 100%;
+    color: lighten($fontcolor, 15%);
+  }
+}
+@mixin jt-links-fancy($color: $accent-color) {
+  color: $color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($color: $color, $amount: 15%);
+    text-decoration: none;
+  }
+}
+
+// hacky glass
+// needs a better solution -- eventually
+// make sure to read .glass-front for hack
+// HTML
+// <div class="glass-back">
+//   <div class="glass-front">...content...</div>
+//   <div class="glass-overlay"></div>
+// </div>
+
+@mixin hackyglass(
+  $hacky-background-url: '',
+  $hacky-height: 500px,
+  /* for background*/ $hacky-glass-height: 80%,
+  $hacky-glass-width: 80%,
+  $hacky-blur: 10px,
+  /* works best 5 - 10*/ $hacky-color: rgba(#808080, 0.3)
+    /*works best with RGBA*/
+) {
+  .glass-back {
+    background: $primary-color url($hacky-background-url);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: $hacky-height;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .glass-overlay {
+    background: inherit;
+    background-size: cover;
+    box-shadow: inset 0 0 0 3000px $hacky-color;
+    filter: blur($hacky-blur);
+    height: $hacky-glass-height;
+    margin: 0 auto;
+    position: relative;
+    width: $hacky-glass-width;
+    z-index: 1;
+  }
+
+  .glass-front {
+    float: right;
+    margin: 0 auto;
+    padding: 25px; //adjust to position text
+    position: relative;
+    z-index: 2;
+  }
+}

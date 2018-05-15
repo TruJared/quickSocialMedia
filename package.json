@@ -1,0 +1,31 @@
+{
+  "name": "quicksocialmedia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "watch 'npm run build:all' . --wait=10 --ignoreDotFiles",
+    "build:all": "not yet setup --- see Brunch",
+    "build:css": "node-sass ./src/sass/style.scss --output-style compressed ./dist/style/style.css | postcss --use autoprefixer --map --replace ./dist/style/style.css",
+    "build:js": "not yet setup --- see Brunch",
+    "build:functions": "netlify-lambda build ./src/lambda",
+    "clean": "rm -r -f dist/**"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^5.0.1",
+    "node-sass": "^4.9.0",
+    "postcss": "^6.0.22",
+    "serve-static": "^1.13.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "netlify-lambda": "^0.4.0",
+    "watch": "^1.0.2"
+  }
+}
