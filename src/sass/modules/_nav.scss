@@ -1,0 +1,29 @@
+nav {
+  background: $ice;
+  height: 100%;
+  width: 145px;
+  position: absolute;
+  top: 0;
+  transition: 1s ease-out;
+  overflow: hidden;
+
+  .nav-list {
+    height: 100%;
+    list-style: none;
+    padding-top: 100px;
+    padding-left: 10px;
+
+    .nav-list-item {
+      padding-bottom: 15px;
+      font-size: 1.15rem;
+      transition: 0.5s;
+      list-style: none;
+      display: show;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}

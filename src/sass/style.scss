@@ -1,2 +1,7 @@
+@import 'partials/_reset';
 @import 'partials/custom';
 @import 'partials/mixins';
+
+@import 'modules/body';
+@import 'modules/header';
+@import 'modules/nav';
