@@ -6,9 +6,11 @@
   "scripts": {
     "start": "node server.js",
     "watch": "watch 'npm run build:all' . --wait=10 --ignoreDotFiles",
-    "build:all": "not yet setup --- see Brunch",
-    "build:css": "node-sass ./src/sass/style.scss --output-style compressed ./dist/style/style.css | postcss --use autoprefixer --map --replace ./dist/style/style.css",
-    "build:js": "not yet setup --- see Brunch",
+    "build:all":
+      "npm run clean && npm run build:css && npm run build:js && cp ./src/index.html ./dist/ && cp -r src/images/ dist/images && cp -r ./src/lambda ./dist/lambda",
+    "build:css": "node-sass ./src/sass/style.scss --output-style compressed ./dist/style/style.css",
+    "build:js":
+      "mkdir dist/javascripts && browserify ./src/javascripts/main.js --transform [ babelify --presets [ 'babel-preset-env'] ] --debug | exorcist ./dist/javascripts/bundle.map.js > ./dist/javascripts/bundle.js && uglifyjs ./dist/javascripts/bundle.js -c -m -o ./dist/javascripts/bundle.js",
     "build:functions": "netlify-lambda build ./src/lambda",
     "clean": "rm -r -f dist/**"
   },
@@ -17,16 +19,24 @@
   "dependencies": {
     "axios": "^0.18.0",
     "connect": "^3.6.6",
-    "dotenv": "^5.0.1",
-    "node-sass": "^4.9.0",
-    "postcss": "^6.0.22",
     "serve-static": "^1.13.2"
   },
   "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "dotenv": "^5.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-import": "^2.12.0",
+    "exorcist": "^1.0.1",
     "netlify-lambda": "^0.4.0",
+    "node-sass": "^4.7.1",
+    "postcss": "^6.0.22",
+    "postcss-cli": "^5.0.0",
+    "uglify-js": "^3.3.25",
     "watch": "^1.0.2"
   }
 }

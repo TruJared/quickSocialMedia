@@ -5,6 +5,6 @@ module.exports = {
     'no-undef': 0,
     'no-console': 0,
     'no-return-assign': 0,
-    'no-shadow': 0,
-  },
+    'no-shadow': 0
+  }
 };
