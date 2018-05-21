@@ -1,17 +1,10 @@
-const hamburgerMenu = document.querySelector('#hamburgerMenu');
-const nav = document.querySelector('nav');
-const navListItem = document.querySelectorAll('.nav-list-item');
-const title = document.querySelector('.title');
+const { $, $$ } = require('./_bling');
 
 const menuTransition = () => {
-  nav.classList.toggle('change');
-  hamburgerMenu.classList.toggle('spin');
-  title.classList.toggle('pusher');
-  setTimeout(() => {
-    for (let i = 0; i < navListItem.length; i++) {
-      navListItem[i].classList.toggle('hide');
-    }
-  }, 400);
+  $('nav').classList.toggle('change');
+  $('#hamburgerMenu').classList.toggle('spin');
+  $('.nav-header').classList.toggle('invisible');
+  $$('.nav-list-item').forEach(item => item.classList.toggle('invisible'));
 };
 
-hamburgerMenu.addEventListener('click', menuTransition);
+$('#hamburgerMenu').on('click', menuTransition);
