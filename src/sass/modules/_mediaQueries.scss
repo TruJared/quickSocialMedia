@@ -1,0 +1,42 @@
+// TODO these need moved into respective module or made more "sassy"
+
+@media screen and (min-width: 600px) {
+  nav {
+    .nav-header {
+      display: inline;
+    }
+    .profile-image {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    .nav-list .nav-list-item {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+  }
+
+  .keep-praising {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    .nav-header {
+      margin: 0 50px;
+    }
+
+    .nav-list .nav-list-item {
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+  }
+
+  .keep-praising {
+    display: inline;
+  }
+}
