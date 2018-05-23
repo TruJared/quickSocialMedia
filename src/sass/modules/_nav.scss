@@ -1,5 +1,6 @@
 nav {
-  background: rgba($primary-color-dark, 0.85);
+  background: rgba(darkgrey, 0.9);
+  font-family: 'Arvo', serif;
   position: fixed;
   display: flex;
   top: 0;
@@ -72,9 +73,11 @@ nav {
     }
 
     .profile-name {
+      color: $neon-purple;
       font-weight: bold;
-      font-size: 1.85rem;
-      text-shadow: 1px 1px 2px $white;
+      font-size: 2rem;
+      text-shadow: 1px 1px 2px $ice;
+      margin-top: 5px;
     }
   }
 
