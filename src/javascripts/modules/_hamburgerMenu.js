@@ -8,3 +8,4 @@ const menuTransition = () => {
 };
 
 $('#hamburgerMenu').on('click', menuTransition);
+$$('.nav-list-item').on('click', menuTransition);

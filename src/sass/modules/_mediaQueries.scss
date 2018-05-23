@@ -2,11 +2,14 @@
 
 @media screen and (min-width: 600px) {
   nav {
+    height: 230px;
+
     .nav-header {
       display: inline;
     }
-    .profile-image {
-      margin-bottom: 5px;
+
+    .nav-list .nav-list-item {
+      width: auto;
     }
   }
 }
@@ -26,7 +29,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 945px) {
   nav {
     .nav-header {
       margin: 0 50px;
@@ -37,4 +40,7 @@
       padding: 20px;
     }
   }
+}
+
+@media screen and (min-width: 1024px) {
 }
