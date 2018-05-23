@@ -1,26 +1,24 @@
 nav {
-  @include alpha-attribute(
-    'background-color',
-    rgba($primary-color-dark, 0.85),
-    $primary-color-light
-  );
+  background: rgba($primary-color-dark, 0.85);
   position: fixed;
+  display: flex;
   top: 0;
-  left: 0;
-  width: 300px;
-  height: 100vh;
+  right: 0;
+  width: 100%;
+  height: 230px;
   padding: 10px;
+  overflow: hidden;
   transition: 1s ease-out;
   z-index: 999;
 
   #hamburgerMenu {
-    float: right;
-    padding-right: 5px;
+    margin-top: -12px;
+    margin-left: 15px;
 
     .hamburger-top,
     .hamburger-middle,
     .hamburger-bottom {
-      border-bottom: 3px solid #bada55;
+      border-bottom: 3px solid $white;
       padding-top: 5px;
       width: 30px;
       transition: 1s ease-out;
@@ -28,28 +26,82 @@ nav {
   }
 
   .nav-header {
-    border: 1px solid $foo;
-    width: 100%;
-    height: 200px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+30,ff7c00+76,ff7f04+100 */
+    background: #ffb76b; /* Old browsers */
+    background: -moz-linear-gradient(
+      -45deg,
+      #ffb76b 0%,
+      #ffa73d 30%,
+      #ff7c00 76%,
+      #ff7f04 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      -45deg,
+      #ffb76b 0%,
+      #ffa73d 30%,
+      #ff7c00 76%,
+      #ff7f04 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      135deg,
+      #ffb76b 0%,
+      #ffa73d 30%,
+      #ff7c00 76%,
+      #ff7f04 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#ffb76b",
+      endColorstr="#ff7f04",
+      GradientType=1
+    ); /* IE6-9 fallback on horizontal gradient */
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 15px;
+    text-align: center;
     transition: 0.5s ease-out;
+    display: none;
+
+    .profile-image {
+      width: 90%;
+      max-width: 190px;
+      margin-top: 10px;
+      border-radius: 100%;
+      border: 10px solid #bada55;
+      transition: 0.5s ease-out;
+    }
+
+    .profile-name {
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #bada55;
+    }
   }
 
   .nav-list {
-    height: 100%;
     list-style: none;
-    text-align: right;
-    bottom: 0;
-    padding: 5px;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
 
     .nav-list-item {
-      border: 1px solid $foo;
       font-weight: bold;
-      font-size: 1.05rem;
+      font-size: 1.5rem;
       list-style: none;
-      padding: 10px;
-      transition: 0.5s ease-out;
+      transition: 1.5s ease-out;
+      text-align: center;
+      align-self: center;
+      flex: 1 0 auto;
       margin: 5px;
-      margin-top: 15px;
+      padding: 15px 10px;
+      opacity: 1;
+      transition: 0.5s ease-out;
+
+      a {
+        color: $ded;
+        text-shadow: 1px 1px 2px black;
+      }
+
+      @include jt-button-fancy(darken($ice, 20%));
     }
   }
 }
@@ -73,9 +125,9 @@ nav {
   background: none;
   height: 30px;
   width: 40px;
+  margin-left: 15px;
 }
 
 .invisible {
   opacity: 0;
-  visibility: hidden;
 }

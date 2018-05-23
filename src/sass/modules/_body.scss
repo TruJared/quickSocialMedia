@@ -7,6 +7,9 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: $accent-color;
+  @include jt-links-fancy($loaded);
+}
+
+h1 {
+  font-size: 1.6rem;
 }

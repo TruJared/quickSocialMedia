@@ -12,7 +12,7 @@
   background-color: $bgcolor;
   background-image: linear-gradient(
     darken($bgcolor, 15%),
-    darken($bgcolor, 15%)
+    darken($bgcolor, 25%)
   );
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -21,11 +21,15 @@
   transition: background-size 0.5s, color 0.5s;
   transition-timing-function: ease-in-out;
 
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
+
   &:hover {
     background-size: 100% 100%;
     color: lighten($fontcolor, 15%);
   }
 }
+
 @mixin jt-links-fancy($color: $accent-color) {
   color: $color;
   text-decoration: none;
@@ -34,16 +38,6 @@
     color: darken($color: $color, $amount: 15%);
     text-decoration: none;
   }
-}
-
-//http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
-
-@mixin alpha-attribute($attribute, $color, $background) {
-  $percent: alpha($color) * 100%;
-  $opaque: opacify($color, 1);
-  $solid-color: mix($opaque, $background, $percent);
-  #{$attribute}: $solid-color;
-  #{$attribute}: $color;
 }
 
 // hacky glass
