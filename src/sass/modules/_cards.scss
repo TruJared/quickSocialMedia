@@ -1,0 +1,76 @@
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+
+  .card {
+    border: 1px solid $black;
+    border-radius: 5px;
+    margin: 20px 10px 0;
+    box-shadow: 5px 5px 10px $shadow;
+    width: 350px;
+    flex: 1 1 auto;
+
+    .card-header {
+      height: 175px;
+      position: relative;
+
+      .store-photo {
+        float: left;
+        border-right: 1px solid $ded;
+      }
+
+      .praise-logo {
+        margin: 5px;
+        border-radius: 66%;
+        border: 2px solid gold;
+        width: 75px;
+      }
+
+      .rank {
+        margin-top: -5px;
+        margin-right: -5px;
+        border: 1px solid $black;
+        border-radius: 5px;
+        position: absolute;
+        right: 0;
+      }
+
+      .address {
+        color: $white;
+        text-shadow: 1px 1px 2px $black;
+        text-align: left;
+        padding-left: 190px;
+        padding-bottom: 15px;
+        font-size: 1.15rem;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .card-body {
+      padding: 10px;
+    }
+  }
+
+  .keep-praising {
+    display: none;
+  }
+
+  .facebook-header {
+    background: $facebook-blue;
+  }
+
+  .google-header {
+    background: $google-red;
+  }
+
+  .insta-header {
+    background: $insta-red-violet;
+  }
+
+  .praise-the-sun {
+    background: $sunbro-green;
+  }
+}

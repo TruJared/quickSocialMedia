@@ -19,8 +19,10 @@
     }
   }
 
-  .keep-praising {
-    display: inline;
+  section {
+    .keep-praising {
+      display: inline;
+    }
   }
 }
 
@@ -34,9 +36,5 @@
       font-size: 1.5rem;
       padding: 20px;
     }
-  }
-
-  .keep-praising {
-    display: inline;
   }
 }
