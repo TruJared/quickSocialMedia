@@ -1,4 +1,0 @@
-[build]
-  command = "npm run build:all && npm run build:functions"
-  publish = "dist"
-  functions = "lambda"
