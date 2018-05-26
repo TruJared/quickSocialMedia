@@ -26,35 +26,30 @@ nav {
     }
   }
 
-  .nav-header {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+30,ff7c00+76,ff7f04+100 */
-    background: #ffb76b; /* Old browsers */
-    background: -moz-linear-gradient(
-      -45deg,
-      #ffb76b 0%,
-      #ffa73d 30%,
-      #ff7c00 76%,
-      #ff7f04 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      -45deg,
-      #ffb76b 0%,
-      #ffa73d 30%,
-      #ff7c00 76%,
-      #ff7f04 100%
-    ); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(
-      135deg,
-      #ffb76b 0%,
-      #ffa73d 30%,
-      #ff7c00 76%,
-      #ff7f04 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr="#ffb76b",
-      endColorstr="#ff7f04",
-      GradientType=1
-    ); /* IE6-9 fallback on horizontal gradient */
+  .nav-header { 
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,ddf1f9+35,a0d8ef+100;Blue+3D+%2318 */
+  background: rgb(254, 255, 255); /* Old browsers */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(254, 255, 255, 1) 0%,
+    rgba(221, 241, 249, 1) 35%,
+    rgba(160, 216, 239, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(254, 255, 255, 1) 0%,
+    rgba(221, 241, 249, 1) 35%,
+    rgba(160, 216, 239, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(254, 255, 255, 1) 0%,
+    rgba(221, 241, 249, 1) 35%,
+    rgba(160, 216, 239, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     border: 1px solid $badass;
     border-radius: 5px;
     width: 70%;
@@ -62,6 +57,7 @@ nav {
     text-align: center;
     transition: 0.5s ease-out;
     display: none;
+    box-shadow: 5px 5px 10px $shadow;
 
     .profile-image {
       width: 90%;
@@ -101,6 +97,7 @@ nav {
       opacity: 1;
       width: 90%;
       transition: 0.5s ease-out;
+      box-shadow: 5px 5px 10px $shadow;
 
       a {
         color: $ded;
