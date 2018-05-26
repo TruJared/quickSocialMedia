@@ -57,7 +57,7 @@ nav {
     text-align: center;
     transition: 0.5s ease-out;
     display: none;
-    box-shadow: 5px 5px 10px $shadow;
+    box-shadow: 5px 5px 10px grey;
 
     .profile-image {
       width: 90%;
@@ -97,7 +97,7 @@ nav {
       opacity: 1;
       width: 90%;
       transition: 0.5s ease-out;
-      box-shadow: 5px 5px 10px $shadow;
+      box-shadow: 5px 5px 10px grey;
 
       a {
         color: $ded;
