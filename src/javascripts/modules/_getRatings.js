@@ -1,15 +1,11 @@
 const axios = require('axios');
 const { $ } = require('./_bling');
+const { buildCard } = require('./_buildCard');
 
 const getRatings = (id) => {
   const { googleId } = storeInfo[id];
   const { facebookId } = storeInfo[id];
   const { instaId } = storeInfo;
-
-  console.log(id);
-  console.log(googleId);
-  console.log(facebookId);
-  console.log(instaId);
 
   const lambdaUrl = 'http://localhost:9000/callApis';
   // 'https://vigilant-babbage-982e22.netlify.com/.netlify/functions/callApis';
@@ -23,7 +19,7 @@ const getRatings = (id) => {
         id: googleId,
       }),
     )
-    .then(res => console.log(res))
+    .then(res => buildCard(res))
     .catch(e => console.log(e));
 };
 // catch NaN

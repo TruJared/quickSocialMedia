@@ -1257,8 +1257,7 @@ exports.handler = (event, context, callback) => {
 
   // -- function to get data from Google API -- //
   const getGoogleData = id => {
-    const googleKey = '& key=AIzaSyALgMeJoWoeLiygtjWOu1uRou7vJRzQg0I';
-    // process.env.GOOGLE_KEY;
+    const googleKey = process.env.GOOGLE_KEY;
 
     axios.get(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${id}${googleKey}`).then(res => res.data).then(res => JSON.stringify(res)).then(res => callback(null, {
       statusCode,
