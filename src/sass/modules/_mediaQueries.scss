@@ -19,18 +19,11 @@
   }
 }
 
-@media screen and (min-width: 620px) {
-  nav {
-    .nav-list .nav-list-item {
-      padding: 20px 5px;
-    }
-  }
-}
-
 @media screen and (min-width: 768px) {
   nav {
     .nav-list .nav-list-item {
       font-size: 1.5rem;
+      padding: 15px 5px;
     }
   }
 
