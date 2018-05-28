@@ -9,7 +9,7 @@ nav {
   height: 100%;
   padding: 10px;
   overflow: hidden;
-  transition: 1s ease-out;
+  transition: 0.5s ease-out;
   z-index: 999;
 
   #hamburgerMenu {
@@ -19,41 +19,41 @@ nav {
     .hamburger-top,
     .hamburger-middle,
     .hamburger-bottom {
-      border-bottom: 3px solid $fbi;
+      border-bottom: 3px solid $black;
       padding-top: 5px;
       width: 30px;
-      transition: 1s ease-out;
+      transition: 0.5s ease-out;
     }
   }
 
-  .nav-header { 
+  .nav-header {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,ddf1f9+35,a0d8ef+100;Blue+3D+%2318 */
-  background: rgb(254, 255, 255); /* Old browsers */
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    rgba(254, 255, 255, 1) 0%,
-    rgba(221, 241, 249, 1) 35%,
-    rgba(160, 216, 239, 1) 100%
-  ); /* FF3.6-15 */
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    rgba(254, 255, 255, 1) 0%,
-    rgba(221, 241, 249, 1) 35%,
-    rgba(160, 216, 239, 1) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(
-    ellipse at center,
-    rgba(254, 255, 255, 1) 0%,
-    rgba(221, 241, 249, 1) 35%,
-    rgba(160, 216, 239, 1) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    border: 1px solid $badass;
+    background: rgb(254, 255, 255); /* Old browsers */
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(254, 255, 255, 1) 0%,
+      rgba(221, 241, 249, 1) 35%,
+      rgba(160, 216, 239, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(254, 255, 255, 1) 0%,
+      rgba(221, 241, 249, 1) 35%,
+      rgba(160, 216, 239, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(
+      ellipse at center,
+      rgba(254, 255, 255, 1) 0%,
+      rgba(221, 241, 249, 1) 35%,
+      rgba(160, 216, 239, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border: 1px solid $fbi;
     border-radius: 5px;
     width: 70%;
-    margin-right: 15px;
+    margin-left: 15px;
     text-align: center;
     transition: 0.5s ease-out;
     display: none;
@@ -62,9 +62,9 @@ nav {
     .profile-image {
       width: 90%;
       max-width: 190px;
-      margin-top: -6px;
+      margin-top: -10px;
       border-radius: 100%;
-      border: 3px solid $badass;
+      border: 3px solid $fbi;
       transition: 0.5s ease-out;
     }
 
@@ -83,17 +83,17 @@ nav {
     align-content: space-around;
     flex-wrap: wrap;
     width: 100%;
+    padding: 20px 50px 50px 25px;
 
     .nav-list-item {
       font-weight: bold;
       font-size: 1.25rem;
       list-style: none;
-      transition: 1.5s ease-out;
       text-align: center;
       align-self: center;
       flex: 1 0 auto;
       margin: 5px;
-      padding: 10px 5px;
+      padding: 20px 5px;
       opacity: 1;
       width: 90%;
       transition: 0.5s ease-out;

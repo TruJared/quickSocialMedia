@@ -7,10 +7,10 @@ section {
   .card {
     border: 1px solid $black;
     border-radius: 5px;
-    margin: 20px 10px 0;
+    margin: 20px 20px 0;
     box-shadow: 5px 5px 10px $shadow;
     width: 350px;
-    flex: 1 1 auto;
+    flex: 1 0 auto;
 
     .card-header {
       position: relative;
@@ -20,22 +20,29 @@ section {
       }
 
       .address {
+        color: $white;
+        text-shadow: 1px 1px 2px $black;
+        text-align: left;
+        font-size: 1.15rem;
         padding: 10px;
+
+        p:nth-child(1) {
+          font-size: 1.35rem;
+          padding-bottom: 1px;
+        }
+
+        p:last-child {
+          color: $fbi;
+          padding-top: 1px;
+        }
       }
 
       .social-logo {
         position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: 5px;
-        margin-top: 5px;
-      }
-
-      .praise-logo {
-        margin: 5px;
-        border-radius: 66%;
-        border: 2px solid gold;
-        width: 75px;
+        bottom: 0;
+        right: 0;
+        margin-right: 10px;
+        margin-bottom: 15px;
       }
 
       .rank {
@@ -47,22 +54,13 @@ section {
         border: 1px solid $black;
         border-radius: 100%;
       }
-
-      .address {
-        color: $white;
-        text-shadow: 1px 1px 2px $black;
-        text-align: left;
-        font-size: 1.15rem;
-      }
     }
 
     .card-body {
       padding: 10px;
+      font-size: 1.1rem;
+      color: $text-color;
     }
-  }
-
-  .keep-praising {
-    display: none;
   }
 
   .facebook-header {

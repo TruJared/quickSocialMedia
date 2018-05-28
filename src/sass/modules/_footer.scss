@@ -1,0 +1,19 @@
+footer {
+  margin: 20px 0 10px 20px;
+  color: $shadow;
+
+  a {
+    color: darken($shadow, 10%);
+    text-decoration: none;
+  }
+
+  ul {
+    padding-top: 3px;
+    padding-left: 10px;
+
+    li {
+      padding-right: 5px;
+      display: inline;
+    }
+  }
+}

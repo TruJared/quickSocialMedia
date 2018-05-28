@@ -8,8 +8,21 @@
       display: inline;
     }
 
+    .nav-list {
+      padding: 10px;
+
+      .nav-list-item {
+        padding: 10px 5px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 620px) {
+  nav {
     .nav-list .nav-list-item {
-      width: auto;
+      padding: 20px 5px;
     }
   }
 }
@@ -18,29 +31,39 @@
   nav {
     .nav-list .nav-list-item {
       font-size: 1.5rem;
-      padding: 10px;
     }
   }
 
-  section {
-    .keep-praising {
-      display: inline;
-    }
+  section .card {
+    margin-left: 10px;
   }
 }
 
 @media screen and (min-width: 945px) {
-  nav {
-    .nav-header {
-      margin: 0 50px;
-    }
-
-    .nav-list .nav-list-item {
-      font-size: 1.5rem;
-      padding: 20px;
-    }
+  .nav-list .nav-list-item {
+    font-size: 1.5rem;
+    padding: 20px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1160px) {
+  nav .nav-list .nav-list-item {
+    padding: 20px 15px;
+  }
+  section .card {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1265px) {
+  nav .nav-list .nav-list-item {
+    padding: 25px;
+  }
+}
+
+@media screen and (min-width: 1465px) {
+  section .card {
+    margin: 20px 5px 0;
+    width: 350px;
+  }
 }
