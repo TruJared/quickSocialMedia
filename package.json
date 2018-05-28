@@ -7,7 +7,7 @@
     "start": "node server.js",
     "watch": "watch 'npm run build:all' . --wait=10 --ignoreDotFiles",
     "build:all":
-      "npm run clean && npm run build:css && npm run build:js && cp ./src/index.html ./dist/ && cp ./src/javascripts/storeInfo.js ./dist/javascripts",
+      "npm run clean && npm run build:css && npm run build:js && cp ./src/index.html ./dist/ && cp ./src/javascripts/storeInfo.js ./dist/javascripts && cp favicon.ico dist",
     "build:css":
       "node-sass ./src/sass/style.scss --output-style compressed ./dist/style/style.css | postcss --use autoprefixer --map --replace ./dist/style/style.css",
     "build:js":
