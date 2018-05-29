@@ -23,18 +23,6 @@ const getRatings = (id) => {
     .then(res => buildCard(res))
     .catch(e => console.log(e));
 };
-// catch NaN
-// .then(res =>
-//   (isNaN(res.data.result.rating)
-//     ? 0
-//     : ($(`#${id}`).innerText = res.data.result.rating.toFixed(2))))
-// .then(res => googleRatingsArray.push(Number(res)))
-// // Find Average
-// .then(() =>
-//   ($('.googleAvgDisplay').innerText =
-//       googleRatingsArray.reduce((acc, value) => acc + value, 0) / googleRatingsArray.length))
-// // Make readable
-// .then(() => ($('.googleAvgDisplay').innerText = $('.googleAvgDisplay').innerText.substring(0, 4)))
 
 export { getRatings };
 

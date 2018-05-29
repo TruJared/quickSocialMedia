@@ -5,3 +5,4 @@ wireframe*
 dist/
 .env
 ./lambda/**
+*.log
