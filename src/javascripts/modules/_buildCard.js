@@ -1,27 +1,42 @@
 const { $ } = require('./_bling');
 
-const buildCard = (res) => {
-  console.log(res);
-  console.log(res.result.photos[0].html_attributions);
-
+const buildCard = (res, id) => {
   const { reviews } = res.result;
+  const address = res.result.formatted_address.split(',');
 
-  // create new array of content
-  const newBody = reviews.map(element => `<div class="entry">
-          <figure class="profile">
-            <img src="${element.profile_photo_url}" alt="profile photo">
-            <figcaption>Rating: ${element.rating} | ${
-  element.relative_time_description
-}</figcaption>
-          </figure>
+  console.log(res);
+  // console.log(res.result.photos[0].html_attributions);
 
-          <p style="margin-top:25px;">${element.text}</p>
-          <br>`);
-  // and insert it into the body of the card
-  $('#google-card .card-body').innerHTML = newBody.join('');
+  // TODO find a better way to get address
+  const storeInfo = `
+    <a href="${res.result.url}" target="_blank"><p>${id.toUpperCase()}</p></a>
+    <p>${address[0]}</p>
+    <p>${address[1]}, ${address[2]}</p>
+    <p a href="tel:+${res.result.international_phone_number}">${
+  res.result.formatted_phone_number
+}</p >`;
 
+  // create new array of content to fill the body
+  const cardBody = reviews.map(element => `
+    <div class="entry">
+      <div class="user-info">
+        <img src="${element.profile_photo_url}" alt="profile photo" class="user-photo">
+        <p>${element.author_name}</p>
+        <p>Gave ${element.rating} stars</p>
+        <p>${element.relative_time_description}</p>
+      </div>
+      <div class="review">
+        <p>${element.text}</p>
+      </div>
+    </div>`);
+
+  // add info to header
   $('#google-card .rank h1').innerHTML = res.result.rating.toFixed(2);
-  // $('#google-card .google-header img').src = storePhoto;
+  $('#google-card .address').innerHTML = storeInfo;
+  // add info to card body
+  $('#google-card .card-body').innerHTML = cardBody.join('');
 };
 
+// <
+//
 export { buildCard };

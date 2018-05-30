@@ -20,7 +20,7 @@ const getRatings = (id) => {
       }),
     )
     .then(res => res.data)
-    .then(res => buildCard(res))
+    .then(res => buildCard(res, id))
     .catch(e => console.log(e));
 };
 

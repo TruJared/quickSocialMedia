@@ -17,11 +17,11 @@ section {
 
       .store-photo {
         width: 100%;
-        max-height: 500px;
+        max-height: 750px;
       }
 
       .store-info {
-        padding-top: 25px;
+        padding-top: 10px;
 
         .address {
           color: $white;
@@ -29,7 +29,7 @@ section {
           text-align: left;
           font-size: 1.15rem;
           padding-left: 10px;
-          padding-bottom: 30px;
+          padding-bottom: 10px;
 
           p:nth-child(1) {
             font-size: 1.75rem;
@@ -53,14 +53,14 @@ section {
         .rank {
           position: absolute;
           bottom: 0;
-          right: 0;
+          left: 0;
           color: $white;
-          margin-bottom: 90px;
-          margin-right: 8px;
+          margin-bottom: 115px;
+          margin-left: 10px;
 
           h1 {
             font-size: 2.5rem;
-            text-shadow: 1px 1px 2px $ice;
+            text-shadow: 1px 1px 2px $shadow;
           }
         }
       }
@@ -73,14 +73,27 @@ section {
 
       .entry {
         display: flex;
-        flex-wrap: wrap;
-        padding: 5px;
+        justify-content: start;
+        align-items: center;
+        border-bottom: 1px solid #dadada;
+        padding: 10px 0;
 
-        .profile img {
-          width: 75px;
-          margin-right: 25px;
-          border: 1px solid $fbi;
-          border-radius: 100%;
+        .user-info {
+          padding: 5px;
+
+          .user-photo {
+            width: 100px;
+            height: 100px;
+            margin-right: 25px;
+            border: 1px solid $fbi;
+            border-radius: 100%;
+            margin-bottom: 5px;
+          }
+        }
+
+        .review {
+          padding-bottom: 45px;
+          line-height: 1.5;
         }
       }
     }

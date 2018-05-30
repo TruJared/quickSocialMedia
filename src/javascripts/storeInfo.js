@@ -9,7 +9,7 @@ const storeInfo = {
     facebookId: 'cartsgalorelavale',
   },
   hagerstown: {
-    googleId: ' ChIJX4_4ViLtyYkRTi1cC4KK4uc',
+    googleId: 'ChIJX4_4ViLtyYkRTi1cC4KK4uc',
     facebookId: 'cartsgalorehagerstown',
   },
   frederick: {
