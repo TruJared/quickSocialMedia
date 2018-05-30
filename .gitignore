@@ -4,5 +4,5 @@ wireframe*
 *.zip
 dist/
 .env
-./lambda/**
+lambda/**
 *.log
