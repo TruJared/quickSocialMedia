@@ -6,12 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "watch": "watch 'npm run build:all' . --wait=10 --ignoreDotFiles",
-    "build:all":
-      "npm run clean && npm run build:css && npm run build:js && cp ./src/index.html ./dist/ && cp ./src/javascripts/storeInfo.js ./dist/javascripts && cp favicon.ico dist",
-    "build:css":
-      "node-sass ./src/sass/style.scss --output-style compressed ./dist/style/style.css | postcss --use autoprefixer --map --replace ./dist/style/style.css",
-    "build:js":
-      "mkdir dist/javascripts && browserify ./src/javascripts/main.js --transform [ babelify --presets [ 'babel-preset-env'] ] --debug | exorcist ./dist/javascripts/bundle.map.js > ./dist/javascripts/bundle.js && uglifyjs ./dist/javascripts/bundle.js -c -m -o ./dist/javascripts/bundle.js",
+    "build:all": "npm run clean && npm run build:css && npm run build:js && cp ./src/index.html ./dist/ && cp ./src/javascripts/storeInfo.js ./dist/javascripts && cp favicon.ico dist",
+    "build:css": "node-sass ./src/sass/style.scss --output-style compressed ./dist/style/style.css | postcss --use autoprefixer --map --replace ./dist/style/style.css",
+    "build:js": "mkdir dist/javascripts && browserify ./src/javascripts/main.js --transform [ babelify --presets [ 'babel-preset-env'] ] --debug | exorcist ./dist/javascripts/bundle.map.js > ./dist/javascripts/bundle.js && uglifyjs ./dist/javascripts/bundle.js -c -m -o ./dist/javascripts/bundle.js",
     "build:functions": "netlify-lambda build ./src/lambda",
     "clean": "rm -r -f dist/**"
   },
