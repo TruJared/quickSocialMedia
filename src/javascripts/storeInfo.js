@@ -26,8 +26,7 @@ const storeInfo = {
   },
   morgantown: {
     googleId: 'ChIJyfxKIoJ8NYgRRPYgvRkSYAo',
-    gogoleImg:
-      'https://lh5.googleusercontent.com/p/AF1QipN9myLHpLRDVANr67JB6IYUHF_2vqD4PbhRn-hj=w408-h306-k-no',
+    gogoleImg: 'https://s3-media4.fl.yelpcdn.com/bphoto/C84oqYJLDPjmnvqqaUhUIQ/o.jpg',
     facebookId: 'cartsgaloremorgantown',
   },
   altoona: {
