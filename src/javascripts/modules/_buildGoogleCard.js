@@ -1,11 +1,8 @@
 const { $ } = require('./_bling');
 
-const buildCard = (res, id) => {
+const buildGoogleCard = (res, id) => {
   const { reviews } = res.result;
   const address = res.result.formatted_address.split(',');
-
-  console.log(res);
-  // console.log(res.result.photos[0].html_attributions);
 
   // TODO find a better way to get address
   const storeListing = `
@@ -33,7 +30,6 @@ const buildCard = (res, id) => {
   // add info to header
   $('#google-card .rank h1').innerHTML = res.result.rating.toFixed(2);
   $('#google-card .store-photo').src = storeInfo[id].googleImg;
-
   $('#google-card .address').innerHTML = storeListing;
   // add info to card body
   $('#google-card .card-body').innerHTML = cardBody.join('');
@@ -41,4 +37,4 @@ const buildCard = (res, id) => {
 
 // <
 //
-export { buildCard };
+export { buildGoogleCard };

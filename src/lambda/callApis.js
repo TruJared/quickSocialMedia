@@ -44,11 +44,14 @@ exports.handler = (event, context, callback) => {
     const facebookKey = process.env.FACEBOOK_KEY;
 
     axios
-      .get(`https://graph.facebook.com/v2.11/${id}?fields=overall_star_rating`, {
-        headers: {
-          Authorization: facebookKey,
+      .get(
+        `https://graph.facebook.com/v2.11/${id}?fields=engagement,fan_count,link,overall_star_rating,phone,location,new_like_count,picture`,
+        {
+          headers: {
+            Authorization: facebookKey,
+          },
         },
-      })
+      )
       .then(res => res.data)
       .then(res => JSON.stringify(res))
       .then(res =>

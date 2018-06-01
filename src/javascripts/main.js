@@ -1,3 +1,3 @@
-require('./modules/_hamburgerMenu');
+require('./modules/_nav');
 require('./modules/_getRatings');
-require('./modules/_buildCard');
+require('./modules/_buildGoogleCard');
