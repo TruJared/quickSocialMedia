@@ -8,7 +8,7 @@ const buildCard = (res, id) => {
   // console.log(res.result.photos[0].html_attributions);
 
   // TODO find a better way to get address
-  const storeInfo = `
+  const storeListing = `
     <a href="${res.result.url}" target="_blank"><p>${id.toUpperCase()}</p></a>
     <p>${address[0]}</p>
     <p>${address[1]}, ${address[2]}</p>
@@ -32,7 +32,9 @@ const buildCard = (res, id) => {
 
   // add info to header
   $('#google-card .rank h1').innerHTML = res.result.rating.toFixed(2);
-  $('#google-card .address').innerHTML = storeInfo;
+  $('#google-card .store-photo').src = storeInfo[id].googleImg;
+
+  $('#google-card .address').innerHTML = storeListing;
   // add info to card body
   $('#google-card .card-body').innerHTML = cardBody.join('');
 };
