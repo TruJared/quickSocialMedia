@@ -8,8 +8,8 @@ const getRatings = (id) => {
   const { facebookId } = storeInfo[id];
   const { instaId } = storeInfo;
 
-  const lambdaUrl = 'http://localhost:9000/callApis';
-  //  'https://vigilant-babbage-982e22.netlify.com/.netlify/functions/callApis';
+  const lambdaUrl = // 'http://localhost:9000/callApis';
+    'https://vigilant-babbage-982e22.netlify.com/.netlify/functions/callApis';
 
   // -- GET GOOGLE --//
   axios
