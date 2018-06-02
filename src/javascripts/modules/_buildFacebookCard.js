@@ -20,18 +20,10 @@ const buildFacebookCard = (res, id) => {
   res.link
 }" target="_blank">link</a> to the page</p>
   <br>
-  <p>And cats</p>
+  <p>And a cat</p>
   <br>
   <hr>
    <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif" style="width:100%;"></a>
-<br>
-<hr>
-   <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif" style="width:100%;"></a>
-<br>
-<hr>
-   <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif" style="width:100%;"></a>
-<br>
-<hr>
 `;
 
   // add info to header
