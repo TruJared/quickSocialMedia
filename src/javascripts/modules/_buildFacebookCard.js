@@ -20,10 +20,19 @@ const buildFacebookCard = (res, id) => {
   res.link
 }" target="_blank">link</a> to the page</p>
   <br>
-  <p>And a random cat</p>
+  <p>And cats</p>
   <br>
+  <hr>
    <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif" style="width:100%;"></a>
-<br>`;
+<br>
+<hr>
+   <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif" style="width:100%;"></a>
+<br>
+<hr>
+   <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif" style="width:100%;"></a>
+<br>
+<hr>
+`;
 
   // add info to header
   $('#facebook-card .rank h1').innerHTML = res.overall_star_rating

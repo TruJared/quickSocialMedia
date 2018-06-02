@@ -1,16 +1,17 @@
 section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 100%;
 
   .card {
     border: 1px solid $black;
     border-radius: 5px;
-    margin: 20px 20px 0;
+    margin: 20px 20px 10px;
     box-shadow: 5px 5px 10px $shadow;
-    width: 350px;
-    flex: 1 0 auto;
+    min-width: 350px;
+    max-width: 700px;
+    flex: 1 1 auto;
 
     .card-header {
       position: relative;
