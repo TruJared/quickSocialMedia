@@ -11,6 +11,8 @@ section {
     box-shadow: 5px 5px 10px $shadow;
     min-width: 350px;
     max-width: 700px;
+    max-height: 1200px;
+    overflow: auto;
     flex: 1 1 auto;
 
     .card-header {
