@@ -4,7 +4,7 @@ const buildGoogleCard = (res, id) => {
   const { reviews } = res.result;
   const address = res.result.formatted_address.split(',');
 
-  // TODO find a better way to get address
+  // // TODO find a better way to get address
   const storeListing = `
     <a href="${res.result.url}" target="_blank"><p>${id.toUpperCase()}</p></a>
     <p>${address[0]}</p>
