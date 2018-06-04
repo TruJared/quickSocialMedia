@@ -1,8 +1,6 @@
 const { $ } = require('./_bling');
 
 const buildFacebookCard = (res, id) => {
-  console.log(res);
-
   const storeListing = `
       <a href="${res.link}" target="_blank"><p>${id.toUpperCase()}</p></a>
       <p>${res.location.street}</p>

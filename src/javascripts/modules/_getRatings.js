@@ -1,12 +1,10 @@
 const axios = require('axios');
-const { $ } = require('./_bling');
 const { buildGoogleCard } = require('./_buildGoogleCard');
 const { buildFacebookCard } = require('./_buildFacebookCard');
 
 const getRatings = (id) => {
   const { googleId } = storeInfo[id];
   const { facebookId } = storeInfo[id];
-  const { instaId } = storeInfo;
 
   const lambdaUrl = // 'http://localhost:9000/callApis';
     'https://vigilant-babbage-982e22.netlify.com/.netlify/functions/callApis';
@@ -37,7 +35,4 @@ const getRatings = (id) => {
     .then(res => buildFacebookCard(res, id))
     .catch(e => console.log(e));
 };
-
 export { getRatings };
-
-// };

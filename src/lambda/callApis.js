@@ -76,7 +76,5 @@ exports.handler = (event, context, callback) => {
     getGoogleData(id);
   } else if (host === 'facebook') {
     getFacebookData(id);
-  } else if (host === 'insta') {
-    getInstaData(id);
   }
 };

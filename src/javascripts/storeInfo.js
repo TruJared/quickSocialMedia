@@ -1,5 +1,4 @@
 const storeInfo = {
-  instaId: 'none',
   cumberland: {
     googleId: 'ChIJuY1-1sSOyokReYi1u4Hb-bM',
     googleImg:
